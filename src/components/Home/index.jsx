@@ -77,9 +77,6 @@ export function Home() {
             value={nome}
             onChange={(e) => setNome(e.target.value)}
           />
-          {touched && nome === "" && (
-            <FormFeedback>O nome é obrigatório!</FormFeedback>
-          )}
         </FormGroup>
         <FormGroup>
           <Label for="nome">Nome do tutor: </Label>
@@ -89,9 +86,6 @@ export function Home() {
             value={tutor}
             onChange={(e) => setTutor(e.target.value)}
           />
-          {touched && tutor === "" && (
-            <FormFeedback>O nome do tutor é obrigatório!</FormFeedback>
-          )}
         </FormGroup>
         <FormGroup>
           <Label for="nome">E-Mail: </Label>
@@ -101,9 +95,6 @@ export function Home() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {touched && email === "" && (
-            <FormFeedback>E-mail é obrigatorio!</FormFeedback>
-          )}
         </FormGroup>
         <FormGroup style={{ width: "100px" }}>
           <Label for="nome">Idade: </Label>
@@ -113,9 +104,6 @@ export function Home() {
             value={idade}
             onChange={(e) => setIdade(e.target.value)}
           />
-          {touched && nome === "" && (
-            <FormFeedback>Idade é obrigatoria</FormFeedback>
-          )}
         </FormGroup>
         <FormsPets />
       </Form>
@@ -128,7 +116,7 @@ export function Home() {
           color="success"
           disabled={loading}
         >
-        {loading ? <Spinner size="sm" /> : "Confirmar"}
+        Confirmar
         </Button>
         <Button style={{ borderRadius: "6px" }} size="20px" color="danger">
           Cancelar
